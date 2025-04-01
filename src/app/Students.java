@@ -1,3 +1,12 @@
+package app;
+
+import app.comparators.ComparatorByFirstName;
+import app.comparators.ComparatorByGroup;
+import app.comparators.ComparatorByLastName;
+import app.comparators.ComparatorByRating;
+import app.extractors.StudentInfoExtractor;
+import app.predicates.PredicateStudent;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,7 +15,7 @@ import java.util.List;
 public class Students {
     private List<Student> students;
 
-    private Students(List<Student> students) {
+    private Students() {
         this.students = new ArrayList<>();
     }
 
@@ -16,7 +25,7 @@ public class Students {
 
     @Override
     public String toString() {
-        return "Students{" +
+        return "app.Students{" +
                 "students=" + students +
                 '}';
     }
@@ -65,7 +74,9 @@ public class Students {
         return new ComparatorByRating();
     }
 
-
-
-
 }
+
+
+
+
+

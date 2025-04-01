@@ -1,3 +1,7 @@
+package app.predicates;
+
+import app.Student;
+
 public class PredicateRatingFromTo implements PredicateStudent{
      private double from;
       private double to;
@@ -9,6 +13,7 @@ public class PredicateRatingFromTo implements PredicateStudent{
 
     @Override
     public boolean test(Student student) {
+
         return student.getRating()>from && student.getRating()<to;
     }
 

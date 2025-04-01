@@ -1,3 +1,7 @@
+package app.comparators;
+
+import app.Student;
+
 import java.util.Comparator;
 
 public class ComparatorByRating implements Comparator<Student> {

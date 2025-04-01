@@ -1,10 +1,12 @@
+package app;
+
 import java.util.Objects;
 
 public class Student {
-    private String firstName;
-    private String lastNane;
-    private String email;
-    private String group;
+    private final String firstName;
+    private final String lastNane;
+    private final String email;
+    private final String group;
     private double rating;
 
     public Student(String firstName, String lastNane, String email, String group) {
@@ -37,7 +39,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "app.Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastNane='" + lastNane + '\'' +
                 ", email='" + email + '\'' +

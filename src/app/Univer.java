@@ -1,7 +1,14 @@
+package app;
+
+import app.extractors.StudentInfoExtractor;
+import app.extractors.StudentNameExtractor;
+import app.predicates.PredicateByGroup;
+import app.predicates.PredicateRatingFromTo;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Univer {
     public static void main(String[] args) {
         List<Student> studentList = new ArrayList<>();
         studentList.add(new Student("Иван", "Иванов", "ivanov@mail.com", "Группа1"));
@@ -22,7 +29,7 @@ public class Main {
         studentList.get(5).addRating(1.5);
 
         // печатаю список студентов
-        Students.print(studentList);
+        Students.print(studentList); // static
 
         System.out.println("--отсортированный список студентов sortByFirstName--");
         List<Student> sortByFirstName = Students.sort(studentList, Students.comparatorByFirstName());
@@ -32,9 +39,9 @@ public class Main {
         List<Student> sortByRating = Students.sort(studentList,Students.comparatorByRating());
         Students.print(sortByRating);
 
-        System.out.println("--отобрать студентов из группы Группа1--");
+        System.out.println("--отобрать студентов имя и фамилия из группы Группа1--");
         StudentInfoExtractor nameExtractor = new StudentNameExtractor();
-        PredicateGroupContents groupPredicate = new PredicateGroupContents("Группа1");
+        PredicateByGroup groupPredicate = new PredicateByGroup("Группа1");
         List<String> group1Students = Students.getStudentsByCondition(studentList, nameExtractor, groupPredicate);
         for (String name : group1Students) {
             System.out.println(name);
