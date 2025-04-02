@@ -57,6 +57,9 @@ public class Students {
     public static boolean hasStudent(List<Student> students, Student student) {
         return students.contains(student);
     }
+   public static void printingMethod(){
+
+   }
 
     public static Comparator<Student> comparatorByFirstName() {
         return new ComparatorByFirstName();
@@ -72,6 +75,7 @@ public class Students {
 
     public static Comparator<Student> comparatorByRating() {
         return new ComparatorByRating();
+
     }
 
 }
